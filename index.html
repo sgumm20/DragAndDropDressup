@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Shruthi Reddy 2024 | Game</title>
+<style>
+#div1, #div2, #div3, #div4 , #div5 {
+	float: left;
+  width: 114px;
+  height: 256px;
+  margin: 10px;
+  padding: 10px;
+	
+}
+	#div1{
+		background-image: url("base2.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		margin-left: 25%;
+			
+	}
+	clearfloat{
+		clear:both;
+		display:block;
+	}
+wrapper {
+    text-align: center;
+	align-content: center;
+	display: block;
+
+}
+body {
+	background-color: #CC5CB9
+}
+	h2{
+		color: floralwhite;
+	}
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+<wrapper>
+<h2>Help her pick a date outfit!</h2>
+<p>Drag and drop each outfit to try it on!</p>
+
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+</div>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+	<img src="black.png" alt="cartoon girl in black shirt" width="114" height="256" draggable="true" ondragstart="drag(event)" id="drag1">
+	</div>
+<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+ 	<img src="pink2.png" alt="cartoon girl in pink shirt" width="114" height="256" draggable="true" ondragstart="drag(event)" id="drag2">
+	</div>
+<div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)">
+	<img src="white2.png" alt="cartoon girl in white shirt" width="114" height="256" draggable="true" ondragstart="drag(event)" id="drag3">
+	</div>
+<div id="div5" ondrop="drop(event)" ondragover="allowDrop(event)">
+	<img src="green.png" alt="cartoon girl in green shirt" width="114" height="256" draggable="true" ondragstart="drag(event)" id="drag4">
+	</div>
+</wrapper>
+	</body>
+</html>
